@@ -1,0 +1,942 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+	<head> 
+		<title></title> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+		<style type="text/css"> 
+      /* CLIENT-SPECIFIC STYLES */ 
+			body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; } 
+			table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; } 
+			img { -ms-interpolation-mode: bicubic; } 
+			 
+			/* RESET STYLES */ 
+			img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; } 
+			table { border-collapse: collapse !important; } 
+			body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; } 
+			 
+			/* iOS BLUE LINKS */ 
+			a[x-apple-data-detectors] { 
+			    color: inherit !important; 
+			    text-decoration: none !important; 
+			    font-size: inherit !important; 
+			    font-family: inherit !important; 
+			    font-weight: inherit !important; 
+			    line-height: inherit !important; 
+			} 
+			 
+			/* GMAIL BLUE LINKS */ 
+			u + #body a { 
+			    color: inherit; 
+			    text-decoration: none; 
+			    font-size: inherit; 
+			    font-family: inherit; 
+			    font-weight: inherit; 
+			    line-height: inherit; 
+			} 
+			 
+			/* SAMSUNG MAIL BLUE LINKS */ 
+			#MessageViewBody a { 
+			    color: inherit; 
+			    text-decoration: none; 
+			    font-size: inherit; 
+			    font-family: inherit; 
+			    font-weight: inherit; 
+			    line-height: inherit; 
+			} 
+ 
+			/* Universal styles for links and stuff */ 
+		 			a.button {
+				transition: all 0.2s ease;
+			}
+
+			a.button:hover {
+				background-color: #444444 !important;
+				box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+				transform: translateY(-2px);
+			}
+
+			a.text-link:hover {
+				color: #222222 !important;
+				text-decoration: underline !important;
+			}
+						@keyframes job-move {
+
+				0% {
+					transform: translateY(0);
+				}
+
+				50% {
+					transform: translateY(-5px);
+				}
+
+				100% {
+					transform: translateY(0);
+				}
+
+			}
+
+			.new-jobs {
+				animation: job-move 1.5s ease-in-out infinite;
+			}
+
+						.career-radio {
+				display: none;
+			}
+
+			.career-label {
+				cursor: pointer;
+			}
+
+			.career-slide {
+				display: none;
+			}
+
+			#career1:checked ~ .career1 {
+				display: block;
+			}
+
+			#career2:checked ~ .career2 {
+				display: block;
+			}
+
+			#career3:checked ~ .career3 {
+				display: block;
+			}
+						#career1:checked ~ label[for="career1"],
+			#career2:checked ~ label[for="career2"],
+			#career3:checked ~ label[for="career3"] {
+				background-color: #222222;
+				color: #ffffff;
+			}
+			/* Responsive styles */ 
+	 			@media screen and (max-width: 600px) {
+
+				.mobile {
+					width: 100% !important;
+				}
+
+				.block {
+					display: block !important;
+					width: 100% !important;
+				}
+
+				.mobile-heading {
+					font-size: 24px !important;
+				}
+
+				.mobile-text {
+					font-size: 16px !important;
+					line-height: 1.5 !important;
+				}
+
+			}
+		</style> 
+	</head> 
+
+	<body id="body" style="margin: 0 !important; padding: 0 !important;"> 
+
+
+		<!-- Main email container -->
+		<table
+			border="0"
+			cellpadding="0"
+			cellspacing="0"
+			width="100%"
+			role="presentation"
+		>
+
+			<tr>
+
+				<td align="center" style="padding: 30px 25px;">
+
+
+					<!-- Inner fixed table -->
+						<table
+						border="0"
+						cellpadding="0"
+						cellspacing="0"
+						width="600"
+						class="mobile"
+						role="presentation"
+						style="
+							width: 100%;
+							max-width: 600px;
+							font-family: Arial, Helvetica, sans-serif;
+						"
+					>	
+
+
+						<!-- Logo image -->
+						<tr>
+
+							<td align="center" style="padding-bottom: 20px;">
+
+								<img
+									src="images/top.jpg"
+									alt="CS Jobs Logo"
+									width="100"
+								>
+
+							</td>
+
+						</tr>
+
+
+     
+						<!-- Headline -->
+						<tr>
+
+							<td align="center">
+
+								<h1 class="mobile-heading" style="
+									font-size: 28px;
+									color: #222222;
+									margin-bottom: 5px;
+								">
+									CS Jobs Weekly
+								</h1>
+
+								<p class="mobile-text" style="
+									font-size: 15px;
+									color: #666666;
+									margin-top: 0;
+								">
+									Internships and entry-level jobs for Computer Science students
+								</p>
+
+							</td>
+
+						</tr>
+
+
+     
+						<!-- Hero Image -->
+						<tr>
+
+							<td align="center" style="padding-top: 20px;">
+
+								<img
+									src="images/main.png"
+									alt="Computer Science Jobs"
+									width="550"
+									style="
+										display: block;
+										max-width: 100%;
+										min-width: 100px;
+										width: 100%;
+										height: auto;
+									"
+								>
+
+							</td>
+
+						</tr>
+
+
+ 
+						<!-- Body copy -->
+						<tr>
+
+							<td style="
+								font-size: 16px;
+								line-height: 1.5;
+								color: #333333;
+								padding-top: 25px;
+							">
+
+								<h2 style="
+									font-size: 21px;
+									color: #222222;
+								">
+									This Week's Jobs
+								</h2>
+
+								<p>
+									Looking for an internship or your first job?
+									Here are a few opportunities for Computer Science students
+									looking to gain experience.
+								</p>
+
+
+								<!-- First job -->
+								<h3 style="
+									font-size: 18px;
+									color: #222222;
+									margin-bottom: 5px;
+								">
+									Software Engineering Intern
+								</h3>
+
+								<p style="
+									font-size: 14px;
+									color: #666666;
+									margin-top: 0;
+								">
+									Los Angeles, CA
+								</p>
+
+								<p>
+									Help build and test web applications while working
+									with a software development team.
+								</p>
+
+
+								<!-- Second job -->
+								<h3 style="
+									font-size: 18px;
+									color: #222222;
+									margin-bottom: 5px;
+								">
+									Data Analyst Intern
+								</h3>
+
+								<p style="
+									font-size: 14px;
+									color: #666666;
+									margin-top: 0;
+								">
+									Remote
+								</p>
+
+								<p>
+									Work with data using tools such as Excel, SQL,
+									and Python to create reports and find trends.
+								</p>
+
+							</td>
+
+						</tr>
+
+						<!-- Featured Jobs -->
+						<tr>
+
+							<td style="
+								padding: 25px 0;
+							">
+							<p
+								class="new-jobs"
+								style="
+									font-size: 13px;
+									font-weight: bold;
+									color: #666666;
+									text-align: center;
+									margin-bottom: 5px;
+								"
+							>
+								NEW JOBS THIS WEEK
+							</p>
+								<h2 style="
+									font-size: 21px;
+									color: #222222;
+									text-align: center;
+								">
+									Featured Jobs
+								</h2>
+
+
+								<!-- Two column layout -->
+								<table
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+									width="100%"
+									role="presentation"
+								>
+
+									<tr>
+
+										<td>
+
+
+											<!-- First column -->
+											<table
+												align="left"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+												width="48%"
+												class="block"
+												role="presentation"
+											>
+
+												<tr>
+
+													<td style="
+														padding: 20px;
+														background-color: #f4f4f4;
+														font-size: 15px;
+														line-height: 1.5;
+														color: #333333;
+													">
+
+														<h3 style="
+															font-size: 18px;
+															color: #222222;
+															margin-top: 0;
+															margin-bottom: 5px;
+														">
+															IT Support Intern
+														</h3>
+
+														<p style="
+															font-size: 14px;
+															color: #666666;
+															margin-top: 0;
+														">
+															Burbank, CA
+														</p>
+
+														<p>
+															Help users troubleshoot computers,
+															software, and other technical issues.
+														</p>
+
+													</td>
+
+												</tr>
+
+											</table>
+
+
+
+											<!-- Second column -->
+											<table
+												align="right"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+												width="48%"
+												class="block"
+												role="presentation"
+											>
+
+												<tr>
+
+													<td style="
+														padding: 20px;
+														background-color: #f4f4f4;
+														font-size: 15px;
+														line-height: 1.5;
+														color: #333333;
+													">
+
+														<h3 style="
+															font-size: 18px;
+															color: #222222;
+															margin-top: 0;
+															margin-bottom: 5px;
+														">
+															Web Development Intern
+														</h3>
+
+														<p style="
+															font-size: 14px;
+															color: #666666;
+															margin-top: 0;
+														">
+															Remote
+														</p>
+
+														<p>
+															Build and update web pages using
+															HTML, CSS, and JavaScript.
+														</p>
+
+													</td>
+
+												</tr>
+
+											</table>
+
+
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+						</tr>
+ 
+						<!-- Button -->
+						<tr>
+
+							<td align="center" style="padding: 30px 0;">
+
+								<table
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+									role="presentation"
+								>
+
+									<tr>
+
+										<td
+											align="center"
+											bgcolor="#222222"
+											style="
+												border-radius: 3px;
+											"
+										>
+
+											<a
+												class="button"
+												href="https://www.linkedin.com/jobs/"
+												target="_blank"
+												style="
+													background-color: #222222;
+													color: #ffffff;
+													padding: 10px 18px;
+													text-decoration: none;
+													font-size: 15px;
+													border: 1px solid #222222;
+													border-radius: 3px;
+													display: inline-block;
+												"
+											>
+												View More Jobs
+											</a>
+
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+						</tr>
+
+						<!-- Career Resources -->
+						<tr>
+
+							<td style="
+								padding: 25px 0;
+							">
+
+								<h2 style="
+									font-size: 21px;
+									color: #222222;
+									text-align: center;
+								">
+									Career Resources
+								</h2>
+
+
+								<!-- Three column layout -->
+								<table
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+									width="100%"
+									role="presentation"
+								>
+
+									<tr>
+
+										<td>
+
+
+											<!-- First column -->
+											<table
+												align="left"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+												width="33%"
+												class="block"
+												role="presentation"
+											>
+
+												<tr>
+
+													<td style="
+														padding: 15px;
+														font-size: 14px;
+														line-height: 1.5;
+														color: #333333;
+														text-align: center;
+													">
+
+														<h3 style="
+															font-size: 17px;
+															color: #222222;
+															margin-top: 0;
+														">
+															Resume Tips
+														</h3>
+
+														<p>
+															Make your skills, projects,
+															and experience easy for
+															recruiters to find.
+														</p>
+
+													</td>
+
+												</tr>
+
+											</table>
+
+
+
+											<!-- Second column -->
+											<table
+												align="left"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+												width="33%"
+												class="block"
+												role="presentation"
+											>
+
+												<tr>
+
+													<td style="
+														padding: 15px;
+														font-size: 14px;
+														line-height: 1.5;
+														color: #333333;
+														text-align: center;
+													">
+
+														<h3 style="
+															font-size: 17px;
+															color: #222222;
+															margin-top: 0;
+														">
+															Interview Prep
+														</h3>
+
+														<p>
+															Practice common questions
+															and be ready to explain
+															your projects.
+														</p>
+
+													</td>
+
+												</tr>
+
+											</table>
+
+
+
+											<!-- Third column -->
+											<table
+												align="right"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+												width="33%"
+												class="block"
+												role="presentation"
+											>
+
+												<tr>
+
+													<td style="
+														padding: 15px;
+														font-size: 14px;
+														line-height: 1.5;
+														color: #333333;
+														text-align: center;
+													">
+
+														<h3 style="
+															font-size: 17px;
+															color: #222222;
+															margin-top: 0;
+														">
+															Portfolio
+														</h3>
+
+														<p>
+															Show your best work so
+															employers can see what
+															you can build.
+														</p>
+
+													</td>
+
+												</tr>
+
+											</table>
+
+
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+						</tr>
+													<!-- Career Path -->
+						<tr>
+
+							<td style="
+								padding: 30px 0;
+								text-align: center;
+							">
+
+								<h2 style="
+									font-size: 21px;
+									color: #222222;
+								">
+									Choose a Career Path
+								</h2>
+
+								<p style="
+									font-size: 15px;
+									color: #666666;
+								">
+									Select an area to learn more.
+								</p>
+
+
+								<input
+									type="radio"
+									name="career"
+									id="career1"
+									class="career-radio"
+									checked
+								>
+
+								<input
+									type="radio"
+									name="career"
+									id="career2"
+									class="career-radio"
+								>
+
+								<input
+									type="radio"
+									name="career"
+									id="career3"
+									class="career-radio"
+								>
+
+
+								<label
+									for="career1"
+									class="career-label"
+									style="
+										display: inline-block;
+										padding: 10px 15px;
+										margin: 5px;
+										border: 1px solid #222222;
+									"
+								>
+									Software
+								</label>
+
+
+								<label
+									for="career2"
+									class="career-label"
+									style="
+										display: inline-block;
+										padding: 10px 15px;
+										margin: 5px;
+										border: 1px solid #222222;
+									"
+								>
+									Data
+								</label>
+
+
+								<label
+									for="career3"
+									class="career-label"
+									style="
+										display: inline-block;
+										padding: 10px 15px;
+										margin: 5px;
+										border: 1px solid #222222;
+									"
+								>
+									IT
+								</label>
+
+
+
+								<!-- Software content -->
+								<div class="career-slide career1" style="
+									padding: 20px;
+									margin-top: 15px;
+									background-color: #f4f4f4;
+								">
+
+									<h3 style="
+										font-size: 18px;
+										color: #222222;
+										margin-top: 0;
+									">
+										Software Development
+									</h3>
+
+									<p style="
+										font-size: 15px;
+										line-height: 1.5;
+										color: #333333;
+										margin-bottom: 0;
+									">
+										Build applications, websites, and software
+										using programming languages and development tools.
+									</p>
+
+								</div>
+
+
+
+								<!-- Data content -->
+								<div class="career-slide career2" style="
+									padding: 20px;
+									margin-top: 15px;
+									background-color: #f4f4f4;
+								">
+
+									<h3 style="
+										font-size: 18px;
+										color: #222222;
+										margin-top: 0;
+									">
+										Data and Analytics
+									</h3>
+
+									<p style="
+										font-size: 15px;
+										line-height: 1.5;
+										color: #333333;
+										margin-bottom: 0;
+									">
+										Work with data using tools such as Excel,
+										SQL, and Python to find useful trends.
+									</p>
+
+								</div>
+
+
+
+								<!-- IT content -->
+								<div class="career-slide career3" style="
+									padding: 20px;
+									margin-top: 15px;
+									background-color: #f4f4f4;
+								">
+
+									<h3 style="
+										font-size: 18px;
+										color: #222222;
+										margin-top: 0;
+									">
+										Information Technology
+									</h3>
+
+									<p style="
+										font-size: 15px;
+										line-height: 1.5;
+										color: #333333;
+										margin-bottom: 0;
+									">
+										Support users, configure computers and networks,
+										and troubleshoot technical problems.
+									</p>
+
+								</div>
+
+
+							</td>
+
+						</tr>
+						<!-- Background image -->
+						<tr>
+
+							<td
+								background="images/main.png"
+								bgcolor="#222222"
+								style="
+									background-image: url('images/main.png');
+									background-position: center;
+									background-size: cover;
+									background-repeat: no-repeat;
+									padding: 35px 25px;
+									text-align: center;
+								"
+							>
+
+								<h2 style="
+									font-size: 21px;
+									color: #ffffff;
+									margin-bottom: 5px;
+								">
+									Build Your Experience
+								</h2>
+
+								<p style="
+									font-size: 15px;
+									line-height: 1.5;
+									color: #ffffff;
+									margin-top: 0;
+								">
+									Internships, projects, and hands-on experience can help
+									you prepare for your first job in Computer Science.
+								</p>
+
+							</td>
+
+						</tr>
+
+
+     
+						<!-- Footer information: Always include an unsubscribe link! -->
+						<tr>
+
+							<td style="
+								padding-top: 15px;
+								margin-top: 40px;
+								border-top: 1px solid #cccccc;
+								text-align: center;
+								font-size: 12px;
+								color: #777777;
+							">
+
+								<p>
+									CS Jobs Weekly
+								</p>
+
+								<p>
+									Don't want to receive these emails?
+							<a
+									class="text-link"
+									href="#"
+									style="color: #555555;"
+							>
+									Unsubscribe
+								</a>
+								</p>
+
+							</td>
+
+						</tr>
+
+
+					</table>
+
+
+				</td>
+
+			</tr>
+
+		</table>
+
+
+	</body> 
+</html>
